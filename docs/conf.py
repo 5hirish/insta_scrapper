@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# instagram_private_api documentation build configuration file, created by
+# instascrape documentation build configuration file, created by
 # sphinx-quickstart on Fri Jan 13 15:42:33 2017.
 #
 # This file is execfile()d with the current directory set to its
@@ -20,8 +20,8 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
-# import instagram_private_api
-# import instagram_web_api
+# import instascrape
+# import web
 
 # -- General configuration ------------------------------------------------
 
@@ -50,7 +50,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'instagram_private_api'
+project = u'instascrape'
 copyright = u'2017, ping'
 author = u'ping'
 
@@ -104,7 +104,7 @@ html_static_path = ['_static']
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'instagram_private_apidoc'
+htmlhelp_basename = 'instascrape_doc'
 
 
 # -- Options for LaTeX output ---------------------------------------------
@@ -131,7 +131,7 @@ latex_elements = {
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    (master_doc, 'instagram_private_api.tex', u'instagram\\_private\\_api Documentation',
+    (master_doc, 'instascrape.tex', u'instagram\\_private\\_api Documentation',
      u'ping', 'manual'),
 ]
 
@@ -141,7 +141,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'instagram_private_api', u'instagram_private_api Documentation',
+    (master_doc, 'instascrape', u'instascrape Documentation',
      [author], 1)
 ]
 
@@ -152,7 +152,7 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'instagram_private_api', u'instagram_private_api Documentation',
-     author, 'instagram_private_api', 'One line description of project.',
+    (master_doc, 'instascrape', u'instascrape Documentation',
+     author, 'instascrape', 'One line description of project.',
      'Miscellaneous'),
 ]

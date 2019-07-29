@@ -9,54 +9,54 @@ except ImportError:
 import sys
 import os
 try:
-    from instagram_private_api import (
+    from instascrape import (
         __version__, Client, ClientError, ClientLoginError,
         ClientCookieExpiredError, ClientThrottledError, ClientCompatPatch,
         ClientLoginRequiredError, MediaTypes,
         ClientSentryBlockError, ClientCheckpointRequiredError,
         ClientChallengeRequiredError)
-    from instagram_private_api.utils import (
+    from instascrape.utils import (
         InstagramID, gen_user_breadcrumb,
         max_chunk_size_generator, max_chunk_count_generator, get_file_size,
         ig_chunk_generator
     )   # noqa
-    from instagram_private_api.constants import Constants
-    from instagram_private_api.compat import compat_urllib_parse
+    from instascrape.constants import Constants
+    from instascrape.compat import compat_urllib_parse
 except ImportError:
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-    from instagram_private_api import (
+    from instascrape import (
         __version__, Client, ClientError, ClientLoginError,
         ClientCookieExpiredError, ClientThrottledError, ClientCompatPatch,
         ClientLoginRequiredError, MediaTypes,
         ClientSentryBlockError, ClientCheckpointRequiredError,
         ClientChallengeRequiredError)
-    from instagram_private_api.utils import (
+    from instascrape.utils import (
         InstagramID, gen_user_breadcrumb,
         max_chunk_size_generator, max_chunk_count_generator, get_file_size,
         ig_chunk_generator
     )   # noqa
-    from instagram_private_api.constants import Constants
-    from instagram_private_api.compat import compat_urllib_parse
+    from instascrape.constants import Constants
+    from instascrape.compat import compat_urllib_parse
 
 try:
-    from instagram_web_api import (
+    from instascrape.web import (
         __version__ as __webversion__,
         Client as WebClient,
         ClientError as WebClientError,
         ClientLoginError as WebClientLoginError,
         ClientCookieExpiredError as WebClientCookieExpiredError,
         ClientCompatPatch as WebClientCompatPatch)
-    from instagram_web_api.compat import compat_urllib_error
+    from instascrape.web import compat_urllib_error
 except ImportError:
     sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
-    from instagram_web_api import (
+    from instascrape.web import (
         __version__ as __webversion__,
         Client as WebClient,
         ClientError as WebClientError,
         ClientLoginError as WebClientLoginError,
         ClientCookieExpiredError as WebClientCookieExpiredError,
         ClientCompatPatch as WebClientCompatPatch)
-    from instagram_web_api.compat import compat_urllib_error
+    from instascrape.web import compat_urllib_error
 
 
 def to_json(python_object):

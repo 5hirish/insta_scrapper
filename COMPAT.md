@@ -1,6 +1,6 @@
 ### Support for Official Endpoints
 
-Note: ``api.*()`` methods refer to using the [app api client](instagram_private_api/) while ``web.*()`` methods refer to the [web api client](instagram_web_api/)
+Note: ``api.*()`` methods refer to using the [app api client](instascrape/) while ``web.*()`` methods refer to the [web api client](instascrape/web/)
 
 Official Endpoints | Availability | Notes |
  ------- | :----------: | ----- |

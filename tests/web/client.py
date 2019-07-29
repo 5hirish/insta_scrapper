@@ -40,7 +40,7 @@ class ClientTests(WebApiTestBase):
             }
         ]
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_login_mock(self, make_request):
         make_request.side_effect = [
             {'status': 'ok', 'authenticated': 'x'},
@@ -74,7 +74,7 @@ class ClientTests(WebApiTestBase):
             self.assertIsNotNone(settings.get(k))
         self.assertIsNotNone(self.api.cookie_jar.dump())
 
-    @compat_mock.patch('instagram_web_api.client.compat_urllib_request.OpenerDirector.open')
+    @compat_mock.patch('web.client.compat_urllib_request.OpenerDirector.open')
     def test_client_errors(self, open_mock):
         self.sleep_interval = 0
         open_mock.side_effect = [
@@ -87,7 +87,7 @@ class ClientTests(WebApiTestBase):
         with self.assertRaises(ClientError):
             self.api.search('maru')
 
-    @compat_mock.patch('instagram_web_api.Client.csrftoken',
+    @compat_mock.patch('web.Client.csrftoken',
                        new_callable=compat_mock.PropertyMock, return_value=None)
     def test_client_init(self, csrftoken):
         with self.assertRaises(ClientError):

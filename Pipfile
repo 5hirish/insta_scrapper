@@ -4,6 +4,9 @@ verify_ssl = true
 name = "pypi"
 
 [dev-packages]
+"flake8" = "*"
+sphinx = "*"
+pylint = "*"
 
 [packages]
 

@@ -9,7 +9,7 @@ if "%SPHINXBUILD%" == "" (
 )
 set SOURCEDIR=.
 set BUILDDIR=_build
-set SPHINXPROJ=instagram_private_api
+set SPHINXPROJ=instascrape
 
 if "%1" == "" goto help
 

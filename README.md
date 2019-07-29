@@ -56,17 +56,17 @@ Tested on Python 2.7 and 3.5.
 
 ## Usage
 
-The [app API client](instagram_private_api/) emulates the official app and has a larger set of functions. The [web API client](instagram_web_api/) has a smaller set but can be used without logging in.
+The [app API client](instascrape/) emulates the official app and has a larger set of functions. The [web API client](instascrape/web/) has a smaller set but can be used without logging in.
 
 Your choice will depend on your use case.
 
 The [``examples/``](examples/) and [``tests/``](tests/) are a good source of detailed sample code on how to use the clients, including a simple way to save the auth cookie for reuse.
 
-### Option 1: Use the [official app's API](instagram_private_api/)
+### Option 1: Use the [official app's API](instascrape/)
 
 ```python
 
-from instagram_private_api import Client, ClientCompatPatch
+from instascrape import Client, ClientCompatPatch
 
 user_name = 'YOUR_LOGIN_USER_NAME'
 password = 'YOUR_PASSWORD'
@@ -82,11 +82,11 @@ for item in items:
     print(item['media_or_ad']['code'])
 ```
 
-### Option 2: Use the [official website's API](instagram_web_api/)
+### Option 2: Use the [official website's API](instascrape/web/)
 
 ```python
 
-from instagram_web_api import Client, ClientCompatPatch, ClientError, ClientLoginError
+from instascrape.web import Client, ClientCompatPatch, ClientError, ClientLoginError
 
 # Without any authentication
 web_api = Client(auto_patch=True, drop_incompat_keys=False)

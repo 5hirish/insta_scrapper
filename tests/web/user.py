@@ -141,7 +141,7 @@ class UserTests(WebApiTestBase):
         results = self.api.friendships_create(self.test_user_id)
         self.assertEqual(results.get('status'), 'ok')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_friendships_create_mock(self, make_request):
         make_request.return_value = {'status': 'ok'}
         self.api.friendships_create(self.test_user_id)
@@ -154,7 +154,7 @@ class UserTests(WebApiTestBase):
         results = self.api.friendships_destroy(self.test_user_id)
         self.assertEqual(results.get('status'), 'ok')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_friendships_destroy_mock(self, make_request):
         make_request.return_value = {'status': 'ok'}
         self.api.friendships_destroy(self.test_user_id)

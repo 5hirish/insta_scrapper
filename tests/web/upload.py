@@ -36,17 +36,17 @@ class UploadTests(WebApiTestBase):
         self.assertEqual(results.get('status'), 'ok')
         self.assertIsNotNone(results.get('media'))
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_post_photo_mock(self, make_request):
         ts_now = time.time()
         make_request.return_value = {'status': 'ok', 'upload_id': '123456789'}
         with compat_mock.patch(
-                'instagram_web_api.client.compat_urllib_request.OpenerDirector.open') as opener, \
-                compat_mock.patch('instagram_web_api.client.time.time') as time_mock, \
-                compat_mock.patch('instagram_web_api.client.random.choice') as rand_choice, \
-                compat_mock.patch('instagram_web_api.Client._read_response') as read_response, \
+                'web.client.compat_urllib_request.OpenerDirector.open') as opener, \
+                compat_mock.patch('web.client.time.time') as time_mock, \
+                compat_mock.patch('web.client.random.choice') as rand_choice, \
+                compat_mock.patch('web.Client._read_response') as read_response, \
                 compat_mock.patch(
-                    'instagram_web_api.client.compat_urllib_request.Request') as request:
+                    'web.client.compat_urllib_request.Request') as request:
             opener.return_value = MockResponse()
             time_mock.return_value = ts_now
             rand_choice.return_value = 'x'

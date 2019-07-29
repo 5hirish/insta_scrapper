@@ -4,7 +4,7 @@
 # You can set these variables from the command line.
 SPHINXOPTS    =
 SPHINXBUILD   = sphinx-build
-SPHINXPROJ    = instagram_private_api
+SPHINXPROJ    = instascrape
 SOURCEDIR     = .
 BUILDDIR      = _build
 

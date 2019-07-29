@@ -19,11 +19,11 @@ from io import BytesIO
 import warnings
 from socket import timeout, error as SocketError
 from ssl import SSLError
-from .compat import (
+from instascrape.compat import (
     compat_urllib_parse, compat_urllib_error,
     compat_urllib_request, compat_urllib_parse_urlparse,
     compat_http_client)
-from .errors import (
+from instascrape.errors import (
     ErrorHandler, ClientError,
     ClientLoginRequiredError, ClientCookieExpiredError,
     ClientConnectionError

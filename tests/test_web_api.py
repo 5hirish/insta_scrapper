@@ -25,13 +25,13 @@ if __name__ == '__main__':
 
     warnings.simplefilter('ignore', UserWarning)
     logging.basicConfig(format='%(name)s %(message)s', stream=sys.stdout)
-    logger = logging.getLogger('instagram_web_api')
+    logger = logging.getLogger('web')
     logger.setLevel(logging.WARNING)
 
     # Example command:
     #   python test_web_api.py -u "xxx" -p "xxx" -save -settings "web_settings.json"
 
-    parser = argparse.ArgumentParser(description='Test instagram_web_api.py')
+    parser = argparse.ArgumentParser(description='Test web.py')
     parser.add_argument('-settings', '--settings', dest='settings_file_path', type=str, required=True)
     parser.add_argument('-u', '--username', dest='username', type=str)
     parser.add_argument('-p', '--password', dest='password', type=str)

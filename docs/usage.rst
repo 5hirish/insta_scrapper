@@ -48,7 +48,7 @@ App API
 
 .. code-block:: python
 
-    from instagram_private_api import Client, ClientCompatPatch
+    from instascrpae import Client, ClientCompatPatch
 
     user_name = 'YOUR_LOGIN_USER_NAME'
     password = 'YOUR_PASSWORD'
@@ -68,7 +68,7 @@ Web API
 
 .. code-block:: python
 
-    from instagram_web_api import Client, ClientCompatPatch, ClientError, ClientLoginError
+    from instascrape.web import Client, ClientCompatPatch, ClientError, ClientLoginError
 
     # Without any authentication
     web_api = Client(auto_patch=True, drop_incompat_keys=False)

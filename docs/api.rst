@@ -8,36 +8,36 @@ This page of the documentation will cover all methods and classes available to t
 The api currently has two main interfaces:
 
 - `App API`_
-    - :class:`instagram_private_api.Client`
-    - :class:`instagram_private_api.ClientCompatPatch`
-    - :class:`instagram_private_api.ClientError`
-    - :class:`instagram_private_api.ClientLoginError`
-    - :class:`instagram_private_api.ClientLoginRequiredError`
-    - :class:`instagram_private_api.ClientCookieExpiredError`
-    - :class:`instagram_private_api.ClientThrottledError`
-    - :class:`instagram_private_api.ClientReqHeadersTooLargeError`
-    - :class:`instagram_private_api.ClientConnectionError`
-    - :class:`instagram_private_api.ClientCheckpointRequiredError`
-    - :class:`instagram_private_api.ClientChallengeRequiredError`
-    - :class:`instagram_private_api.ClientSentryBlockError`
-    - :class:`instagram_private_api.MediaRatios`
-    - :class:`instagram_private_api.MediaTypes`
+    - :class:`instascrape.Client`
+    - :class:`instascrape.ClientCompatPatch`
+    - :class:`instascrape.ClientError`
+    - :class:`instascrape.ClientLoginError`
+    - :class:`instascrape.ClientLoginRequiredError`
+    - :class:`instascrape.ClientCookieExpiredError`
+    - :class:`instascrape.ClientThrottledError`
+    - :class:`instascrape.ClientReqHeadersTooLargeError`
+    - :class:`instascrape.ClientConnectionError`
+    - :class:`instascrape.ClientCheckpointRequiredError`
+    - :class:`instascrape.ClientChallengeRequiredError`
+    - :class:`instascrape.ClientSentryBlockError`
+    - :class:`instascrape.MediaRatios`
+    - :class:`instascrape.MediaTypes`
 
 - `Web API`_
-    - :class:`instagram_web_api.Client`
-    - :class:`instagram_web_api.ClientCompatPatch`
-    - :class:`instagram_web_api.ClientError`
-    - :class:`instagram_web_api.ClientCookieExpiredError`
-    - :class:`instagram_web_api.ClientConnectionError`
-    - :class:`instagram_web_api.ClientBadRequestError`
-    - :class:`instagram_web_api.ClientForbiddenError`
-    - :class:`instagram_web_api.ClientThrottledError`
+    - :class:`instascrape.web.Client`
+    - :class:`instascrape.web.ClientCompatPatch`
+    - :class:`instascrape.web.ClientError`
+    - :class:`instascrape.web.ClientCookieExpiredError`
+    - :class:`instascrape.web.ClientConnectionError`
+    - :class:`instascrape.web.ClientBadRequestError`
+    - :class:`instascrape.web.ClientForbiddenError`
+    - :class:`instascrape.web.ClientThrottledError`
 
 
 App API
 -----------
 
-.. automodule:: instagram_private_api
+.. automodule:: instascrape
 
 .. autoclass:: Client
    :special-members: __init__
@@ -61,7 +61,7 @@ App API
 Web API
 -------------------
 
-.. automodule:: instagram_web_api
+.. automodule:: instascrape.web
 
 .. autoclass:: Client
    :special-members: __init__

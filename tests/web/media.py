@@ -141,7 +141,7 @@ class MediaTests(WebApiTestBase):
         self.assertEqual(results.get('status'), 'ok')
         self.assertIsNotNone(results.get('id'))
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_post_comment_mock(self, make_request):
         make_request.return_value = {'status': 'ok', 'id': '12345678'}
         self.api.post_comment(self.test_media_id + '_12345', '<3')      # test sanitise media id
@@ -155,7 +155,7 @@ class MediaTests(WebApiTestBase):
         results = self.api.delete_comment(self.test_media_id, self.test_comment_id)
         self.assertEqual(results.get('status'), 'ok')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_del_comment_mock(self, make_request):
         make_request.return_value = {'status': 'ok'}
         self.api.delete_comment(self.test_media_id, self.test_comment_id)
@@ -169,7 +169,7 @@ class MediaTests(WebApiTestBase):
         results = self.api.post_like(self.test_media_id)
         self.assertEqual(results.get('status'), 'ok')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_post_like_mock(self, make_request):
         make_request.return_value = {'status': 'ok'}
         self.api.post_like(self.test_media_id)
@@ -183,7 +183,7 @@ class MediaTests(WebApiTestBase):
         results = self.api.delete_like(self.test_media_id)
         self.assertEqual(results.get('status'), 'ok')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_delete_like_mock(self, make_request):
         make_request.return_value = {'status': 'ok'}
         self.api.delete_like(self.test_media_id)
@@ -192,7 +192,7 @@ class MediaTests(WebApiTestBase):
                 **{'media_id': self.test_media_id}),
             params='')
 
-    @compat_mock.patch('instagram_web_api.Client._make_request')
+    @compat_mock.patch('web.Client._make_request')
     def test_post_comment_validation_mock(self, make_request):
         make_request.return_value = {'status': 'ok', 'id': '12345678'}
 
