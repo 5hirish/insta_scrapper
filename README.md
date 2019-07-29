@@ -7,8 +7,6 @@ A Python wrapper for the Instagram private API with no 3rd party dependencies. S
 [![Docs](https://img.shields.io/badge/docs-readthedocs.io-ff4980.svg?maxAge=2592000)](https://instagram-private-api.readthedocs.io/en/latest/)
 [![Build](https://img.shields.io/travis/ping/instagram_private_api.svg)](https://travis-ci.org/ping/instagram_private_api)
 
-[![Build](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/ping)
-
 ## Overview
 
 I wrote this to access Instagram's API when they clamped down on developer access. Because this is meant to achieve [parity](COMPAT.md) with the [official public API](https://www.instagram.com/developer/endpoints/), methods not available in the public API will generally have lower priority.
@@ -115,15 +113,10 @@ You are advised to persist/cache the auth cookie details to avoid logging in eve
 
 The saved auth cookie can be reused for up to **90 days**.
 
-## Donate
-
-Want to keep this project going? Please donate generously [https://www.buymeacoffee.com/ping](https://www.buymeacoffee.com/ping)
-
-[![Build](https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png)](https://www.buymeacoffee.com/ping)
-
 ## Support
 
-Make sure to review the [contributing documentation](CONTRIBUTING.md) before submitting an issue report or pull request.
+Make sure to review the [contributing documentation](CONTRIBUTING.md) before submitting an issue report or pull request.<br>
+Donate to the original contributor here: [@ping](https://github.com/ping)
 
 ## Legal
 
